@@ -1,0 +1,160 @@
+
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Warm beige and soft mauve background */
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(225, 204, 179, 0.65),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(155, 125, 145, 0.30),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(184, 181, 164, 0.35),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #e8dccc,
+            #eee5df,
+            #e5dce3
+        );
+
+    color: #3d3735;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background: rgba(255, 255, 255, 0.88);
+    border: 2px solid #d0d7de;
+    padding: 18px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(90, 75, 65, 0.06);
+}
+
+.header h1 {
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+}
+
+.highlight {
+    color: #8c7184;
+    font-weight: 600;
+}
+
+/* Main Layout */
+.main-area {
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+}
+
+/* Content */
+.content {
+    flex: 2;
+    min-width: 0;
+    background: rgba(255, 255, 255, 0.90);
+    border: 1px solid #e0d8d2;
+    padding: 18px;
+    border-radius: 8px;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    min-width: 0;
+    background: rgba(255, 255, 255, 0.90);
+    border: 1px solid #e0d8d2;
+    padding: 18px;
+    border-radius: 8px;
+}
+
+/* Profile Card */
+.profile-card {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    border: 2px dashed #d6c5b8;
+    padding: 14px;
+    margin-bottom: 18px;
+    background: #fbf8f4;
+    border-radius: 8px;
+}
+
+/* Profile Image */
+.avatar {
+    width: 96px;
+    height: 96px;
+    min-width: 96px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid #e5d6c8;
+}
+
+/* Button */
+.contact-btn {
+    margin-top: 8px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    background: #8c7184;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: #71576b;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 0.9rem;
+    color: #786c68;
+}
+
+/* Responsive Layout */
+@media (max-width: 700px) {
+    .main-area {
+        flex-direction: column;
+    }
+
+    .content,
+    .sidebar {
+        width: 100%;
+    }
+
+    .avatar {
+        width: 72px;
+        height: 72px;
+        min-width: 72px;
+    }
+}
